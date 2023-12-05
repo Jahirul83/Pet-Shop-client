@@ -27,9 +27,8 @@ const Navbar = () => {
         <li><NavLink to="/about">about</NavLink></li>
         <li><NavLink to="/contacts">contacts</NavLink></li>
         {
-            user && <><li><NavLink to="/addBook">Add Book </NavLink></li>
-                <li><NavLink to="/allBooks"> All Books</NavLink></li>
-                <li><NavLink to="/borrowedBooks">Borrowed Books</NavLink></li>
+            user && <><li><NavLink to="/addPet">Add PET</NavLink></li>
+                <li><NavLink to="/allPet"> All PET</NavLink></li>
             </>
         }
     </>
