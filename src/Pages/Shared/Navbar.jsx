@@ -6,25 +6,32 @@ import swal from "sweetalert";
 
 
 const Navbar = () => {
-    const { user, LogOut } = useContext(AuthContext);
+    const { dark, setDark, user, LogOut } = useContext(AuthContext);
 
+    const handleDark = () => {
+        setDark(!dark);
+        console.log(dark);
+    }
 
     const handleLogout = () => {
         LogOut()
-        .then(() => {
-            swal(" Logout Successful", "You clicked the button!", "success");
-        }).catch((err) => {
-            console.log(err);
-        });
+            .then(() => {
+                swal(" Logout Successful", "You clicked the button!", "success");
+            }).catch((err) => {
+                console.log(err);
+            });
 
     }
     const navLinks = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/services'>services</NavLink></li>
-        <li><NavLink to='/about'>about</NavLink></li>
-        <li><NavLink to='/event'>event</NavLink></li>
-        {/* <li><NavLink to='/login'>Login</NavLink></li>
-        <li><NavLink to='/register'>Register</NavLink></li> */}
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/about">about</NavLink></li>
+        <li><NavLink to="/contacts">contacts</NavLink></li>
+        {
+            user && <><li><NavLink to="/addBook">Add Book </NavLink></li>
+                <li><NavLink to="/allBooks"> All Books</NavLink></li>
+                <li><NavLink to="/borrowedBooks">Borrowed Books</NavLink></li>
+            </>
+        }
     </>
     return (
         <div>
@@ -39,6 +46,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl text-red-600 font-bold">Pet Shop</a>
+                    <button onClick={handleDark} className="hidden md:flex justify-center items-center btn btn-xs btn-secondary">Dark/light</button>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -55,7 +63,7 @@ const Navbar = () => {
                                     </div>
                                 </label>
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                   
+
                                     <Link className="ml-3 mb-2" to="/profile"><li>Profile</li></Link>
                                     <Link className="ml-3" to="/register"><li>Register</li></Link>
                                     <li><a onClick={handleLogout}>Logout</a></li>

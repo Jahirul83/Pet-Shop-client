@@ -8,6 +8,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Profile from "../Pages/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
+import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
 
 const Router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const Router = createBrowserRouter([
       {
         path: "/profile",
         element: <PrivateRoute><Profile></Profile></PrivateRoute>,
+      },
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contacts",
+        element: <Contact></Contact>
       },
     ]
   },
