@@ -13,6 +13,11 @@ const Navbar = () => {
         console.log(dark);
     }
 
+    const containerStyle = {
+        backgroundColor: dark ? '#333333' : '#ffffff',
+        color: dark ? '#ffffff' : '#333333',
+    };
+
     const handleLogout = () => {
         LogOut()
             .then(() => {
@@ -34,7 +39,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div style={containerStyle} className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -45,7 +50,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl text-red-600 font-bold">Pet Shop</a>
-                    <button onClick={handleDark} className="hidden md:flex justify-center items-center btn btn-xs btn-secondary">Dark/light</button>
+                    <button onClick={handleDark} className="hidden md:flex justify-center items-center btn btn-xs btn-secondary">{dark ? "light" : "dark"}</button>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
