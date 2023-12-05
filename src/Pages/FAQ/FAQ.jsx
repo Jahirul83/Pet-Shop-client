@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import faqPic from '../../assets/undraw_Questions_re_1fy7.png'
-import { AuthContext } from '../../../providers/AuthProvider';
+import { AuthContext } from '../../providers/AuthProvider';
+
 
 const FAQ = () => {
     const { dark} = useContext(AuthContext);
