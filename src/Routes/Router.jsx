@@ -16,6 +16,7 @@ import PetDetails from "../Pages/Pets/PetDetails";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import AllDonation from "../Pages/Dashboard/AllDonation/AllDonation";
 import User from "../Pages/Dashboard/User/User";
+import DashboardError from "../Pages/Dashboard/DashboardError/DashboardError";
 
 const Router = createBrowserRouter([
   {
@@ -61,6 +62,7 @@ const Router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Dashboard></Dashboard>,
+    errorElement: <DashboardError></DashboardError>,
     children: [
       {
         path: "user",
