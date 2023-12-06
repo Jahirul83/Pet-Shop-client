@@ -103,7 +103,7 @@ const AddPets = () => {
                         <textarea type="text" defaultValue="short_description" name="short_description" placeholder="short description" className="textarea textarea-bordered textarea-sm w-full" required />
                     </div>
                     <div className="form-control mt-6">
-                        <input className="btn btn-primary btn-block" type="submit" value="Add books" />
+                        <input className="btn btn-primary btn-block" type="submit" value="Add Pets" />
                     </div>
                 </form>
             </div>

@@ -19,6 +19,11 @@ import User from "../Pages/Dashboard/User/User";
 import DashboardError from "../Pages/Dashboard/DashboardError/DashboardError";
 import DonationCampaign from "../DonationCampaign/DonationCampaign";
 import DonationDetails from "../DonationCampaign/donationDetails";
+import CreateDonation from "../DonationCampaign/CreateDonation";
+import MyDonationCampaigns from "../DonationCampaign/Donation/myDonationCampaigns";
+import MyDonation from "../DonationCampaign/Donation/myDonation";
+import AdoptionRequest from "../Pages/Adoption/AdoptionRequest";
+import MyAddedPets from "../Pages/Pets/MyAddedPets/MyAddedPets";
 
 const Router = createBrowserRouter([
   {
@@ -90,6 +95,30 @@ const Router = createBrowserRouter([
       {
         path: "allDonation",
         element:<AllDonation></AllDonation>
+      },
+      {
+        path: "createDonation",
+        element:<CreateDonation></CreateDonation>
+      },
+      {
+        path: "donation",
+        element: <DonationCampaign></DonationCampaign>
+      },
+      {
+        path: "myDonationCampaigns",
+        element: <MyDonationCampaigns></MyDonationCampaigns>
+      },
+      {
+        path: "myDonations",
+        element: <MyDonation></MyDonation>
+      },
+      {
+        path: "adoptionRequest",
+        element: <AdoptionRequest></AdoptionRequest>
+      },
+      {
+        path: "myAddedPets",
+        element: <MyAddedPets></MyAddedPets>
       },
     ]
   },

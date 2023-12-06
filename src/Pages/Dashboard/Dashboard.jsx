@@ -23,16 +23,16 @@ const Dashboard = () => {
                         isAdmin ? <>
                             <li><NavLink to="/dashboard/user">user</NavLink> </li>
                             <li><NavLink to="/dashboard/allPet">All pet</NavLink> </li>
-                            <li><NavLink to="/dashboard/allDonation">All Donations</NavLink> </li>
+                            <li><NavLink to="/dashboard/donation">All Donations</NavLink> </li>
                         </>
                             :
                             <>
                                 <li><NavLink to="/dashboard/addPet">Add a pet</NavLink> </li>
                                 <li><NavLink to="/dashboard/myAddedPets">My added pets</NavLink> </li>
                                 <li><NavLink to="/dashboard/adoptionRequest">Adoption Request</NavLink> </li>
-                                <li><NavLink to="/dashboard/donationCampaign">Create Donation Campaign</NavLink> </li>
+                                <li><NavLink to="/dashboard/createDonation">Create Donation Campaign</NavLink> </li>
                                 <li><NavLink to="/dashboard/myDonationCampaigns">My Donation Campaigns</NavLink> </li>
-                                <li><NavLink to="/dashboard/myDonation">My Donations</NavLink> </li>
+                                <li><NavLink to="/dashboard/myDonations">My Donations</NavLink> </li>
 
                             </>
                     }
