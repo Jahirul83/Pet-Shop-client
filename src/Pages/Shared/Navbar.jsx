@@ -32,9 +32,11 @@ const Navbar = () => {
         <li><NavLink to="/about">about</NavLink></li>
         <li><NavLink to="/contacts">contacts</NavLink></li>
         <li><NavLink to="dashboard/user">deshboard</NavLink></li>
+
         {
             user && <>
-            {/* <li><NavLink to="/addPet">Add PET</NavLink></li> */}
+                {/* <li><NavLink to="/addPet">Add PET</NavLink></li> */}
+                <li><NavLink to="/donation">Donation</NavLink></li>
                 <li><NavLink to="/allPet"> All PET</NavLink></li>
             </>
         }
