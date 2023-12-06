@@ -13,6 +13,9 @@ import Contact from "../Pages/Contact/Contact";
 import AddPets from "../Pages/Pets/AddPets";
 import AllPet from "../Pages/Pets/AllPet";
 import PetDetails from "../Pages/Pets/PetDetails";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import AllDonation from "../Pages/Dashboard/AllDonation/AllDonation";
+import User from "../Pages/Dashboard/User/User";
 
 const Router = createBrowserRouter([
   {
@@ -45,10 +48,6 @@ const Router = createBrowserRouter([
         element: <Contact></Contact>
       },
       {
-        path: "/addPet",
-        element: <AddPets></AddPets>
-      },
-      {
         path: "/allPet",
         element: <PrivateRoute><AllPet></AllPet></PrivateRoute>
       },
@@ -56,6 +55,28 @@ const Router = createBrowserRouter([
         path: "/petDetails/:id",
         element: <PrivateRoute><PetDetails></PetDetails></PrivateRoute>,
         loader:({ params }) => fetch(`https://pet-shop-server-neon.vercel.app/pets/${params.id}`)
+      },
+    ]
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "user",
+        element:<User></User>
+      },
+      {
+        path: "addPet",
+        element:<AddPets></AddPets>
+      },
+      {
+        path: "allPet",
+        element:<AllPet></AllPet>
+      },
+      {
+        path: "allDonation",
+        element:<AllDonation></AllDonation>
       },
     ]
   },
