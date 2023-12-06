@@ -18,6 +18,7 @@ import AllDonation from "../Pages/Dashboard/AllDonation/AllDonation";
 import User from "../Pages/Dashboard/User/User";
 import DashboardError from "../Pages/Dashboard/DashboardError/DashboardError";
 import DonationCampaign from "../DonationCampaign/DonationCampaign";
+import DonationDetails from "../DonationCampaign/donationDetails";
 
 const Router = createBrowserRouter([
   {
@@ -61,6 +62,11 @@ const Router = createBrowserRouter([
         path: "/petDetails/:id",
         element: <PrivateRoute><PetDetails></PetDetails></PrivateRoute>,
         loader:({ params }) => fetch(`https://pet-shop-server-neon.vercel.app/pets/${params.id}`)
+      },
+      {
+        path: "/donationDetails/:id",
+        element: <PrivateRoute><DonationDetails></DonationDetails></PrivateRoute>,
+        loader:({ params }) => fetch(`https://pet-shop-server-neon.vercel.app/donations/${params.id}`)
       },
     ]
   },
