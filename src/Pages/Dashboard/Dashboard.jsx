@@ -27,17 +27,12 @@ const Dashboard = () => {
                         </>
                             :
                             <>
-
-                                {/* Add a pet
-My added pets
-Adoption Request
-Create Donation Campaign
-My Donation Campaigns
-My Donations */}
-                                <li><NavLink to="/dashboard/myCart">My cart</NavLink> </li>
-                                <li><NavLink to="/dashboard/myCart">My cart</NavLink> </li>
-
-                                <li><NavLink to="/dashboard/allPet">add pet</NavLink> </li>
+                                <li><NavLink to="/dashboard/addPet">Add a pet</NavLink> </li>
+                                <li><NavLink to="/dashboard/myAddedPets">My added pets</NavLink> </li>
+                                <li><NavLink to="/dashboard/adoptionRequest">Adoption Request</NavLink> </li>
+                                <li><NavLink to="/dashboard/donationCampaign">Create Donation Campaign</NavLink> </li>
+                                <li><NavLink to="/dashboard/myDonationCampaigns">My Donation Campaigns</NavLink> </li>
+                                <li><NavLink to="/dashboard/myDonation">My Donations</NavLink> </li>
 
                             </>
                     }
