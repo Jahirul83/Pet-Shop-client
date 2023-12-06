@@ -17,6 +17,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import AllDonation from "../Pages/Dashboard/AllDonation/AllDonation";
 import User from "../Pages/Dashboard/User/User";
 import DashboardError from "../Pages/Dashboard/DashboardError/DashboardError";
+import DonationCampaign from "../DonationCampaign/DonationCampaign";
 
 const Router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const Router = createBrowserRouter([
       {
         path: "/allPet",
         element: <PrivateRoute><AllPet></AllPet></PrivateRoute>
+      },
+      {
+        path: "/donation",
+        element: <DonationCampaign></DonationCampaign>
       },
       {
         path: "/petDetails/:id",
