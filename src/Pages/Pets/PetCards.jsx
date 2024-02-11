@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { Rating } from "@smastrom/react-rating";
 
 const PetCards = ({ pet }) => {
-    const { _id, location, image, age, name, short_description } = pet;
+    const { _id, location, image, age, name, rating, short_description } = pet;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -13,6 +14,11 @@ const PetCards = ({ pet }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>Age: {age} years old</p>
                     <p>Location: {location}</p>
+                    <p><Rating
+                        style={{ maxWidth: 80 }}
+                        value={rating}
+                        readOnly
+                    /></p>
                     <p>{short_description}</p>
                     <div className="card-actions">
                         <Link to={`/petDetails/${_id}`}><button className="btn btn-primary">details</button></Link>

@@ -1,4 +1,7 @@
-import { useLoaderData} from "react-router";
+import { Rating } from "@smastrom/react-rating";
+import { useLoaderData } from "react-router";
+
+import '@smastrom/react-rating/style.css'
 
 
 const PetDetails = () => {
@@ -13,8 +16,12 @@ const PetDetails = () => {
                     <p className="py-3">description: {short_description}</p>
                     <p className="py-3">Age: {age}</p>
                     <p className="py-3">Category : {category}</p>
-                    <p className="py-3">location: {location}</p>
-                    <p className="py-3">rating: {rating}</p>
+                    <p className="py-3">Location: {location}</p>
+                    <p className="py-3 flex">Rating: <Rating className="ml-5"
+                        style={{ maxWidth: 80 }}
+                        value={rating}
+                        readOnly
+                    /></p>
                 </div>
             </div>
         </div>
