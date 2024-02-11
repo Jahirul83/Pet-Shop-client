@@ -17,7 +17,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_04d6gpn', 'template_hgbrvof', form.current, {
+        emailjs.sendForm('service_04d6gpn', 'template_flnapqh', form.current, {
             publicKey: '6J6MtBIi4FHcqXp-T',
         })
             .then(
@@ -47,16 +47,16 @@ const Contact = () => {
                                     </label>
                                     <label className="input-group">
                                         <span>Name</span>
-                                        <input type="text" placeholder="Your name" className='input w-full' name="from_name" />
+                                        <input type="text" placeholder="Your name" className='input w-full' name="from_name" required />
                                     </label>
                                     <label className="input-group">
                                         <span>Email</span>
-                                        <input type="text" placeholder="info@site.com" className='input w-full' name="user_email" />
+                                        <input type="text" placeholder="info@site.com" className='input w-full' name="user_email" required/>
                                     </label>
                                 </div>
                                 <textarea className="textarea textarea-ghost border-inherit" placeholder="message" name="message"></textarea>
                                 <div className="card-actions justify-end">
-                                    <input type="submit" placeholder="Send" className='btn btn-primary' />
+                                    <input type="submit" placeholder="Send" className='btn btn-primary' required/>
                                 </div>
                             </div>
                         </form>
